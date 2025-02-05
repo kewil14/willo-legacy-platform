@@ -1,0 +1,67 @@
+# Ignorer les fichiers système
+.DS_Store
+Thumbs.db
+
+# Ignorer les fichiers de logs
+*.log
+logs/
+debug.log
+error_log
+php_errors.log
+
+# Ignorer les fichiers sensibles
+.env
+.env.local
+.env.*.local
+config.php
+database.php
+
+# Ignorer les dépendances Composer
+/vendor/
+/composer.lock
+
+# Ignorer les fichiers cache
+/cache/
+/tmp/
+/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignorer les fichiers de sessions PHP
+sess_*
+
+# Ignorer les fichiers uploadés (ex : images, documents, etc.)
+/uploads/
+/public/uploads/
+/storage/
+
+# Ignorer les fichiers générés par IDEs et éditeurs de code
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorer les fichiers générés par Docker
+docker-compose.override.yml
+.dockerignore
+
+# Ignorer les fichiers de build et déploiement
+/public/build/
+/public/dist/
+/build/
+/dist/
+*.zip
+*.tar.gz
+
+# Ignorer les fichiers de dépendances front-end
+/node_modules/
+package-lock.json
+yarn.lock
+
+# Ignorer les caches de tests PHPUnit
+phpunit.xml
+phpunit.xml.dist
+/.phpunit.result.cache
+
+# Ignorer les fichiers de configuration serveur (si nécessaire)
+.htaccess
