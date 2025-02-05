@@ -13,6 +13,9 @@ WORKDIR /var/www/html
 # Copier le code source dan sle contenair
 COPY . /var/www/html
 
+# copie du config.php
+COPY config.php /var/www/html/config.php
+
 # Donner les bonnes permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
