@@ -9,17 +9,17 @@ services:
     volumes:
       - .:/var/www/html
     depends_on:
-      - db
+      - mysql
 
   mysql:
     image: mysql:8.0
     container_name: mysql-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: 
       MYSQL_DATABASE: willo
       MYSQL_USER: root
-      MYSQL_PASSWORD: password
+      MYSQL_PASSWORD: 
     ports:
       - "3306:3306"
     volumes:
