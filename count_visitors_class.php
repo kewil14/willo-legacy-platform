@@ -100,9 +100,9 @@ class Count_visitors {
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $insert_sql = "INSERT INTO {$this->table_name} (id, ip_adr, client, visit_date, time, on_page)
-                        SELECT NULL, :remote_addr, :client, CURDATE(), CURTIME(), :on_page
-                        FROM DUAL
-                        WHERE :remote_addr NOT IN ($liste_ip_str) and :client NOT LIKE '%SM-G930F%' and :client NOT LIKE '%SM-A202F%' and :client NOT LIKE'%curl/7.29.0%'";
+            SELECT NULL, :remote_addr, :client, CURDATE(), CURTIME(), :on_page
+            FROM DUAL
+            WHERE :remote_addr NOT IN ($liste_ip_str) and :client NOT LIKE '%SM-G930F%' and :client NOT LIKE '%SM-A202F%' and :client NOT LIKE'%curl/7.29.0%'";
         $stmt = $pdo->prepare($insert_sql);
         $stmt->execute([
             'remote_addr' => $_SERVER['REMOTE_ADDR'],
